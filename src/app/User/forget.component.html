@@ -1,0 +1,53 @@
+<div class="blank">
+    <div class="splash">
+        <div class="color-line"></div>
+        <div class="splash-title">
+            <h1>Homer - Responsive Admin Theme</h1>
+            <p>Special Admin Theme for small and medium webapp with very clean and aesthetic style and feel. </p>
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
+    </div>
+    <!--[if lt IE 7]>
+        <p class="alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="color-line"></div>
+
+    <div class="back-link">
+        <a routerLink="/index" class="btn btn-primary">Back to Home</a>
+    </div>
+
+    <div class="login-container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center m-b-md">
+                    <h3>PASSWORD RECOVER</h3>
+                    <small>Please fill the form to recover your password</small>
+                </div>
+                <div class="hpanel">
+                    <div class="panel-body">
+                        <p>
+                            Enter your Contact Number to Recover your password.
+                        </p>
+                            <form #fp="ngForm" >
+                                <div class="form-group">
+                                    <label class="control-label">Contact</label>
+                                    <input type="text" placeholder="Contact" title="Please enter you Contact Number" ngModel name="Contact"  class="form-control">
+                                    <span class="help-block small">Your registered Contact Number</span>
+                                </div>
+    
+                                <button class="btn btn-success btn-block" (click)="forgetPass(fp)">Reset password</button>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+</div>

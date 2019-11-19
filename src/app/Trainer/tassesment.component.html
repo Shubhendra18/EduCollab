@@ -1,0 +1,127 @@
+<div class="fixed-navbar sidebar-scroll">
+    <app-tnavbar></app-tnavbar>
+    <app-tsidebar></app-tsidebar>
+    <div id="wrapper">
+        <div class="small-header">
+            <div class="hpanel">
+                <div class="panel-body">
+                    <div id="hbreadcrumb" class="pull-right">
+                        <ol class="hbreadcrumb breadcrumb">
+                            <li><a routerLink="/admin">Dashboard</a></li>
+                            <li class="active">
+                                <span>Add New User</span>
+                            </li>
+                        </ol>
+                    </div>
+                    <h2 class="font-light m-b-xs">
+                        Admin Dashboard
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="hpanel">
+                            <div class="panel-heading">
+                                <div class="panel-tools">
+                                    <a class="showhide"><i class="fa fa-chevron-up"></i></a>
+                                </div>
+                                Add New Session
+                            </div>
+                            <div class="panel-body">
+                                <form #tad="ngForm">
+                                    <div class="row">
+                                       
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label>Course</label>
+                                                <div class="input-group m-b">
+                                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                                    <select class="form-control" name="Qualification" ngModel={{Qualification}} (change)="onSelect($event.target.value)">
+                                                        <option value="0" selected disabled>--Select--</option>
+                                                        <option value="1">High School</option>
+                                                        <option value="2">Inter</option>
+                                                        <option value="3">Graduation</option>
+                                                        <option value="4">Post Graduation</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label>Student Name</label>
+                                                <div class="input-group m-b">
+                                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                                    <select class="form-control" name="SName" ngModel={{Sname}}>
+                                                        <option value="0" selected disabled>--Select--</option>
+                                                        <option *ngFor="let k of user" value="{{k.Id}}">{{k.Name}}
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label>Assessment Name</label>
+                                                <div class="input-group m-b">
+                                                    <span class="input-group-addon"><i class="fa fa-archive"></i></span>
+                                                    <input type="text" placeholder="Assessment Name" name="AssessmentName" ngModel
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label>Completion Date</label>
+                                                <div class="input-group m-b">
+                                                    <span class="input-group-addon"><i class="fa fa-image"></i></span>
+                                                    <input type="date" class="form-control" name="CDate" ngModel>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label> Assessment Description</label>
+
+                                                <div class="input-group m-b">
+                                                    <span class="input-group-addon"><i
+                                                            class="fa fa-align-justify"></i></span>
+                                                    <textarea class="form-control" rows="5" id="comment"
+                                                        name="Description" ngModel></textarea>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                       
+                                       
+                                    </div>
+
+                                    <div class="hr-line-dashed"></div>
+                                    <button class="btn btn-danger " type="button"><i class="fa fa-refresh"></i>
+                                        Cancle</button>
+                                    <button class="btn btn-primary" style="margin-left: 4px" (click)="AddAssessment(tad)"
+                                        type="submit"><i class="fa fa-user-plus"></i>
+                                        Add </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <span class="pull-right">
+                Example text
+            </span>
+            Company 2015-2020
+        </footer>
+
+    </div>
+</div>

@@ -1,0 +1,132 @@
+<div class="fixed-navbar sidebar-scroll">
+    <app-tnavbar></app-tnavbar>
+    <app-tsidebar></app-tsidebar>
+    <div id="wrapper">
+        <div class="small-header">
+            <div class="hpanel">
+                <div class="panel-body">
+                    <div id="hbreadcrumb" class="pull-right">
+                        <ol class="hbreadcrumb breadcrumb">
+                            <li><a routerLink="/admin">Dashboard</a></li>
+                            <li class="active">
+                                <span>View Users</span>
+                            </li>
+                        </ol>
+                    </div>
+                    <h2 class="font-light m-b-xs">
+                        Trainer Dashboard
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="hpanel hgreen">
+                        <div class="panel-heading">
+                            <div class="panel-tools">
+                                <a class="showhide"><i class="fa fa-chevron-up"></i></a>
+                            </div>
+                            Update Profile
+                        </div>
+                        <div class="panel-body">
+                            <div class="pull-right text-right">
+                                <div class="btn-group">
+                                    <i class="fa fa-facebook btn btn-default btn-xs"></i>
+                                    <i class="fa fa-twitter btn btn-default btn-xs"></i>
+                                    <i class="fa fa-linkedin btn btn-default btn-xs"></i>
+                                </div>
+                            </div>
+                            <img alt="logo" class="img-circle m-b m-t-md" src="assets/images/profile.jpg">
+                            <h3><a href="#">{{tnm.Name}}</a></h3>
+                            <div class="text-muted font-bold m-b-xs">{{tnm.Address}}</div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae
+                                ultrices
+                                accumsan.
+                            </p>
+                            <button class="btn btn-success btn-block" data-toggle="collapse" data-target="#contentId">
+                                <i class="fa fa-user"></i> &nbsp;Update Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 collapse" id="contentId">
+                    <div class="hpanel hred">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="hpanel">
+                                    <div class="panel-heading">
+                                        <div class="panel-tools">
+                                            <a class="showhide"><i class="fa fa-chevron-up"></i></a>
+                                        </div>
+                                        Update Profile Details
+                                    </div>
+                                    <div class="panel-body">
+                                        <form #bd="ngForm">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <div class="form-group">
+                                                        <label>Blog Title</label>
+                                                        <div class="input-group m-b">
+                                                            <span class="input-group-addon"><i
+                                                                    class="fa fa-archive"></i></span>
+                                                            <input type="text" placeholder="" class="form-control"
+                                                                name="blogTitle" ngModel>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-8">
+                                                    <div class="form-group">
+                                                        <label>BlogPic(thumbnailPic)</label>
+                                                        <div class="input-group m-b">
+                                                            <span class="input-group-addon"><i
+                                                                    class="fa fa-image"></i></span>
+                                                            <input type="text" class="form-control" name="blogPic"
+                                                                ngModel>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label>Description</label>
+
+                                                        <div class="input-group m-b">
+                                                            <span class="input-group-addon"><i
+                                                                    class="fa fa-align-justify"></i></span>
+                                                            <textarea class="form-control" rows="10" id="comment"
+                                                                name="description" ngModel></textarea>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+
+                                            <div class="hr-line-dashed"></div>
+                                            <button class="btn btn-danger " type="button"><i class="fa fa-refresh"></i>
+                                                Cancle</button>
+                                            <button class="btn btn-primary" style="margin-left: 4px"
+                                                (click)="AddBlog(bd)" type="button"><i class="fa fa-user-plus"></i>
+                                                Add Blog</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <span class="pull-right">
+                Example text
+            </span>
+            Company 2015-2020
+        </footer>
+    </div>
+</div>

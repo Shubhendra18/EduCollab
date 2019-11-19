@@ -1,0 +1,118 @@
+<div class="fixed-navbar sidebar-scroll">
+    <app-anavbar></app-anavbar>
+    <app-asidebar></app-asidebar>
+    <div id="wrapper">
+        <div class="small-header">
+            <div class="hpanel">
+                <div class="panel-body">
+                    <div id="hbreadcrumb" class="pull-right">
+                        <ol class="hbreadcrumb breadcrumb">
+                            <li><a routerLink="/admin">Dashboard</a></li>
+                            <li class="active">
+                                <span>Add New Playlist</span>
+                            </li>
+                        </ol>
+                    </div>
+                    <h2 class="font-light m-b-xs">
+                        Admin Dashboard
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="hpanel">
+                            <div class="panel-heading">
+                                <div class="panel-tools">
+                                    <a class="showhide"><i class="fa fa-chevron-up"></i></a>
+                                </div>
+                                Add New Playlist
+                            </div>
+                            <div class="panel-body">
+                                <form #pd="ngForm">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label>Session Name</label>
+                                                <div class="input-group m-b">
+                                                    <span class="input-group-addon"><i class="fa fa-archive"></i></span>
+                                                    <input type="text" placeholder="Session Name" name="sessionName" ngModel
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label>Publish On</label>
+                                                <div class="input-group m-b">
+                                                    <span class="input-group-addon"><i class="fa fa-archive"></i></span>
+                                                    <input type="date"  name="publishOn" ngModel
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label>Conducted By</label>
+                                                <div class="input-group m-b">
+                                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                                    <select class="form-control" name="conductBy" ngModel>
+                                                        <option value="0" selected disabled>--Select--</option>
+                                                        <option *ngFor="let k of trainer" value="{{k.id}}">{{k.Name}}
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label>Description</label>
+
+                                                <div class="input-group m-b">
+                                                    <span class="input-group-addon"><i
+                                                            class="fa fa-align-justify"></i></span>
+                                                    <textarea class="form-control" rows="5" id="comment"
+                                                      placeholder="Description"  name="description" ngModel></textarea>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label>Video Path</label>
+                                                <div class="input-group m-b">
+                                                    <span class="input-group-addon"><i class="fa fa-image"></i></span>
+                                                    <input type="text" class="form-control" name="videoPath" ngModel>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      
+                                    </div>
+
+                                    <div class="hr-line-dashed"></div>
+                                    <button class="btn btn-danger " type="button"><i class="fa fa-refresh"></i>
+                                        Cancle</button>
+                                    <button class="btn btn-primary" style="margin-left: 4px" (click)="AddPlaylist(pd)"
+                                        type="submit"><i class="fa fa-user-plus"></i>
+                                        Add Playlist</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <span class="pull-right">
+                Example text
+            </span>
+            Company 2015-2020
+        </footer>
+
+    </div>
+</div>

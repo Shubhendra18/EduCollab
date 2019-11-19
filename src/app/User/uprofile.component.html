@@ -1,0 +1,168 @@
+<div class="fixed-navbar sidebar-scroll">
+    <app-unavbar></app-unavbar>
+    <app-usidebar></app-usidebar>
+    <div id="wrapper">
+        <div class="small-header">
+            <div class="hpanel">
+                <div class="panel-body">
+                    <div id="hbreadcrumb" class="pull-right">
+                        <ol class="hbreadcrumb breadcrumb">
+                            <li><a routerLink="/admin">Dashboard</a></li>
+                            <li class="active">
+                                <span>View Users</span>
+                            </li>
+                        </ol>
+                    </div>
+                    <h2 class="font-light m-b-xs">
+                        User Dashboard
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="hpanel hgreen">
+                        <div class="panel-heading">
+                            <div class="panel-tools">
+                                <a class="showhide"><i class="fa fa-chevron-up"></i></a>
+                            </div>
+                            Update Profile
+                        </div>
+                        <div class="panel-body">
+                            <div class="pull-right text-right">
+                                <div class="btn-group">
+                                    <i class="fa fa-facebook btn btn-default btn-xs"></i>
+                                    <i class="fa fa-twitter btn btn-default btn-xs"></i>
+                                    <i class="fa fa-linkedin btn btn-default btn-xs"></i>
+                                </div>
+                            </div>
+                            <img alt="logo" class="img-circle m-b m-t-md" src="assets/images/profile.jpg">
+                            <h3><a href="#">{{nm.Name}}</a></h3>
+                            <div class="text-muted font-bold m-b-xs">{{nm.Address}}</div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae
+                                ultrices
+                                accumsan.
+                            </p>
+                            <button class="btn btn-success btn-block" data-toggle="collapse" data-target="#contentId">
+                                <i class="fa fa-user"></i> &nbsp;Update Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 collapse" id="contentId">
+                    <div class="hpanel hred">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="hpanel">
+                                    <div class="panel-heading">
+                                        <div class="panel-tools">
+                                            <a class="showhide"><i class="fa fa-chevron-up"></i></a>
+                                        </div>
+                                        Update Profile Details
+                                    </div>
+                                    <div class="panel-body">
+                                        <form #bd="ngForm">
+                                            <div class="row">
+                                                <div class="col-lg-8">
+                                                    <div class="form-group">
+                                                        <label>Email</label>
+                                                        <div class="input-group m-b">
+                                                            <span class="input-group-addon"><i
+                                                                    class="fa fa-archive"></i></span>
+                                                            <input type="text" placeholder="" class="form-control"
+                                                                name="Email" [(ngModel)]="nm.Email">
+                                                            <input type="hidden" name="Id" [(ngModel)]="nm.Id">
+                                                            <input type="hidden" name="Name" [(ngModel)]="nm.Name">
+                                                            <input type="hidden" name="Qualification" [(ngModel)]="nm.Qualification">
+                                                            <input type="hidden" name="ProfilePic" [(ngModel)]="nm.ProfilePic">
+                                                            <input type="hidden" name="Username" [(ngModel)]="nm.Username">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4">
+                                                    <div class="form-group">
+                                                        <label>Password</label>
+                                                        <div class="input-group m-b">
+                                                            <span class="input-group-addon"><i
+                                                                    class="fa fa-image"></i></span>
+                                                            <input type="text" class="form-control" name="Password"
+                                                                [(ngModel)]="nm.Password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label>Contact</label>
+                                                        <div class="input-group m-b">
+                                                            <span class="input-group-addon"><i
+                                                                    class="fa fa-telephone"></i></span>
+                                                            <input type="text" class="form-control" name="Contact"
+                                                                [(ngModel)]="nm.Contact">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label>Address</label>
+                                                        <div class="input-group m-b">
+                                                            <span class="input-group-addon"><i
+                                                                    class="fa fa-image"></i></span>
+                                                            <input type="text" class="form-control" name="Address"
+                                                                [(ngModel)]="nm.Address">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="hr-line-dashed"></div>
+                                            <button class="btn btn-danger " type="button"><i class="fa fa-refresh"></i>
+                                                Cancle</button>
+                                            <button (click)="update(bd)" class="btn btn-success ml-1">
+                                                <i class="fa fa-pencil"></i>Update
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <span class="pull-right">
+                Example text
+            </span>
+            Company 2015-2020
+        </footer>
+    </div>
+</div>
+
+<!-- <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Edit Profile</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			Are You Sure???
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button data-dismiss="modal" (click)="update(ud)" type="button" class="btn btn-success">Update</button>
+				</div>
+			
+		</div>
+	</div>
+</div> -->

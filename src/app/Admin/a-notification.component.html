@@ -1,0 +1,97 @@
+<div class="fixed-navbar sidebar-scroll">
+        <app-anavbar></app-anavbar>
+        <app-asidebar></app-asidebar>
+        <div id="wrapper">
+            <div class="small-header">
+                <div class="hpanel">
+                    <div class="panel-body">
+                        <div id="hbreadcrumb" class="pull-right">
+                            <ol class="hbreadcrumb breadcrumb">
+                                <li><a routerLink="/admin">Dashboard</a></li>
+                                <li class="active">
+                                    <span>Send Notification</span>
+                                </li>
+                            </ol>
+                        </div>
+                        <h2 class="font-light m-b-xs">
+                            Admin Dashboard
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="hpanel email-compose">
+                                <div class="panel-heading hbuilt">
+                                    <div class="p-xs h4">
+    
+                                        Send Notification
+    
+                                    </div>
+                                </div>
+                                <div class="panel-heading hbuilt">
+                                    <div class="p-xs">
+    
+                                        <form #em="ngForm" class="form-horizontal">
+                                            <div class="form-group"><label
+                                                    class="col-sm-1 control-label text-left">To:</label>
+    
+                                                <div class="col-sm-11"><input type="text" class="form-control input-sm"
+                                                        ngModel name="to" placeholder="example@email.com"></div>
+                                            </div>
+                                            <div class="form-group"><label
+                                                    class="col-sm-1 control-label text-left">Subject:</label>
+    
+                                                <div class="col-sm-11"><input type="text" class="form-control input-sm"
+                                                        ngModel name="sub" placeholder="Enter Email subject"></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-1 control-label text-left">Message:</label>
+    
+                                                <div class="col-sm-11">
+    
+                                                    <textarea class="form-control summernote" rows="10" id="comment" ngModel
+                                                        name="msg"></textarea>
+                                                </div>
+    
+                                            </div>
+                                            <button class="btn btn-primary" (click)="sendNoti(em)">Send email</button>
+                                        </form>
+    
+    
+                                    </div>
+                                </div>
+                                <!-- <div class="panel-footer">
+                                    <div class="pull-right">
+                                        <div class="btn-group">
+                                            <button class="btn btn-default"><i class="fa fa-edit"></i> Save</button>
+                                            <button class="btn btn-default"><i class="fa fa-trash"></i> Discard</button>
+                                        </div>
+                                    </div>
+                                  
+                                    <div class="btn-group">
+                                        <button class="btn btn-default"><i class="fa fa-paperclip"></i> </button>
+                                        <button class="btn btn-default"><i class="fa fa-image"></i> </button>
+                                    </div>
+    
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <footer class="footer">
+                    <span class="pull-right">
+                        Example text
+                    </span>
+                    Company 2015-2020
+                </footer>
+    
+            </div>
+        </div>
+    
+    
+    

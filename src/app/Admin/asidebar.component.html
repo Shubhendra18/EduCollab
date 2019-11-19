@@ -1,0 +1,75 @@
+<aside id="menu">
+  <div id="navigation">
+    <div class="profile-picture">
+      <a href="index-2.html">
+        <img src="assets/images/profile.jpg" class="img-circle m-b" alt="logo">
+      </a>
+      <div class="stats-label text-color">
+        <span class="font-extra-bold font-uppercase">Hello! Admin</span>
+
+        <div class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <small class="text-muted">Admin Area <b class="caret"></b></small>
+          </a>
+          <ul class="dropdown-menu animated flipInX m-t-xs">
+            <li><a routerLink="/Aprofile">Profile</a></li>
+            <li class="divider"></li>
+            <li><a href="login.html">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <ul class="nav" id="side-menu">
+      <li routerLinkActive="active">
+        <a routerLink="/admin"> <span class="nav-label">Dashboard</span> </a>
+      </li>
+
+      <li routerLinkActive="active">
+        <a><span class="nav-label">User</span><span class="fa arrow"></span> </a>
+        <ul class="nav nav-second-level">
+          <li><a routerLink="/adduser">Add</a></li>
+          <li><a routerLink="/viewuser">View & Manage</a></li>
+        </ul>
+      </li>
+      <li routerLinkActive="active">
+        <a><span class="nav-label">Trainer</span><span class="fa arrow"></span> </a>
+        <ul class="nav nav-second-level">
+          <li><a routerLink="/addtrainer">Add</a></li>
+          <li><a routerLink="/viewtrainer">View & Manage</a></li>
+        </ul>
+      </li>
+      <li routerLinkActive="active">
+        <a > <span class="nav-label">Add Session</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level">
+          <li><a routerLink="/addsession">Add</a></li>
+          <li><a routerLink="/aviewusession">View & Manage</a></li>
+        </ul>
+      </li>
+
+      <li routerLinkActive="active">
+        <a > <span class="nav-label">Add Blog</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level">
+          <li><a routerLink="/addblog">Add</a></li>
+          <li><a routerLink="/aviewblog">View & Manage</a></li>
+        </ul>
+      </li>
+      <li routerLinkActive="active">
+        <a > <span class="nav-label">Add Playlist</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level">
+          <li><a routerLink="/addplaylist">Add</a></li>
+          <li><a routerLink="/viewplaylist">View & Manage</a></li>
+        </ul>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/aviewreviews"> <span class="nav-label">View Reviews</span> </a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/anotification"> <span class="nav-label">Send Notification</span> </a>
+      </li>
+      <li routerLinkActive="active">
+        <a href="index-2.html"> <span class="nav-label">Logout</span> </a>
+      </li>
+    </ul>
+  </div>
+</aside>

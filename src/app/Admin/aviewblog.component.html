@@ -1,0 +1,97 @@
+<div class="fixed-navbar sidebar-scroll">
+    <app-anavbar></app-anavbar>
+    <app-asidebar></app-asidebar>
+    <div id="wrapper">
+        <div class="small-header">
+            <div class="hpanel">
+                <div class="panel-body">
+                    <div id="hbreadcrumb" class="pull-right">
+                        <ol class="hbreadcrumb breadcrumb">
+                            <li><a routerLink="/admin">Dashboard</a></li>
+                            <li class="active">
+                                <span>Add New User</span>
+                            </li>
+                        </ol>
+                    </div>
+                    <h2 class="font-light m-b-xs">
+                        Admin Dashboard
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="hpanel">
+                            <div class="panel-heading">
+                                <div class="panel-tools">
+                                    <a class="showhide"><i class="fa fa-chevron-up"></i></a>
+                                </div>
+                                Add New Blog
+                            </div>
+                            <div class="panel-body">
+                                <form #bd="ngForm" >
+                                    <div class="row">
+                                        <div class="col-md-3"  *ngFor="let k of blogs">
+                                            <div class="hpanel blog-box">
+                                              <div class="panel-heading">
+                                                <div class="media clearfix">
+                                                  <a class="pull-left">
+                                                    <img src="assets/images/a4.jpg" alt="profile-picture">
+                                                  </a>
+                                                  <div class="media-body">
+                                                    <small>Created by: <span class="font-bold">Anna Smith</span> </small>
+                                                    <br />
+                                                    <small class="text-muted">10.07.2015, 02:12 am</small>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="panel-image">
+                                                <img class="img-responsive" src="assets/images/p1.jpg" alt="">
+                                                <div class="title">
+                                                
+                                                    <h4> {{k.blogTitle}}</h4>
+                                                 
+                                                  
+                                                </div>
+                                              </div>
+                                              <div class="panel-body">
+                                               {{k.description}}
+                                              </div>
+                                             
+                                            </div>
+                                    
+                                    
+                                          
+                                    
+                                    
+                                        
+                                    
+                                    <div class="hr-line-dashed"></div>
+                                    <button class="btn btn-danger " type="button"><i class="fa fa-refresh"></i>
+                                        Cancle</button>
+                                    <button class="btn btn-primary" style="margin-left: 4px" (click)="AddBlog(bd)"
+                                        type="button"><i class="fa fa-user-plus"></i>
+                                        Add Blog</button>
+                                      </div>
+                                        
+                                        
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <span class="pull-right">
+                Example text
+            </span>
+            Company 2015-2020
+        </footer>
+
+    </div>
+</div>
